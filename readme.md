@@ -46,4 +46,12 @@ No libraries or frameworks were used.
 ---
 
 ## 📂 Project Structure
-
+cursor-clone/
+│
+├── index.html
+├── images/
+│ ├── preview images
+│ ├── feature images
+│ └── assets
+│
+└── README.md
