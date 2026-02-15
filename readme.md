@@ -1,9 +1,11 @@
 # Cursor Website Clone
 
+
 A modern UI clone of the Cursor landing page built using pure HTML and CSS.  
 This project focuses on layout accuracy, responsive design, and polished dark SaaS styling.
 
 ## 🚀 Overview
+<img width="1833" height="923" alt="Screenshot 2026-02-16 014745" src="https://github.com/user-attachments/assets/33748c90-3351-41c0-8ab8-c79225f34f25" />
 
 This project recreates the visual design of the Cursor homepage, including:
 
@@ -27,7 +29,8 @@ The goal was to practice real-world frontend structure, spacing, and professiona
 - HTML5
 - CSS3 (Flexbox + Grid)
 - Responsive layout techniques
-- Modern UI styling principles
+- Modern UI styling principle>
+
 
 No libraries or frameworks were used.
 
@@ -55,3 +58,4 @@ cursor-clone/
 │ └── assets
 │
 └── README.md
+
