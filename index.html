@@ -1,0 +1,992 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: #14120B;
+        }
+
+        .container {
+            width: 70vw;
+            margin: auto;
+            min-height: 100vh;
+            position: relative;
+
+
+        }
+
+        .svg,
+        .nav-links,
+        .nav-buttons {
+            margin-top: 20px;
+        }
+
+        .svg {
+            color: white;
+            width: 90px;
+            height: auto;
+        }
+
+        .nav {
+            position: fixed;
+
+            left: 0;
+            width: 100%;
+            padding: 0 15%;
+            display: flex;
+            justify-content: space-between;
+            background-color: #14120B;
+
+        }
+
+        .nav-links {
+            list-style: none;
+            display: flex;
+            gap: 40px;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: #ffffff;
+            font-size: 15px;
+            font-weight: 500;
+            transition: 0.3s ease;
+        }
+
+        .nav-links a:hover {
+            color: #b5b5b5;
+        }
+
+        /* Buttons */
+        .nav-buttons {
+            display: flex;
+            gap: 15px;
+        }
+
+        /* Common Button */
+        .btn {
+            padding: 8px 18px;
+            border-radius: 20px;
+            font-size: 14px;
+            text-decoration: none;
+            transition: 0.3s ease;
+        }
+
+        /* Outline Button */
+        .btn-outline {
+            border: 1px solid #ffffff;
+            color: #ffffff;
+        }
+
+        .btn-outline:hover {
+            background-color: #ffffff;
+            color: #000000;
+        }
+
+        /* Primary Button */
+        .btn-primary {
+            background-color: #ffffff;
+            color: #000000;
+            font-weight: 500;
+        }
+
+        .btn-primary:hover {
+            background-color: #dcdcdc;
+        }
+
+        /* ===== HERO SECTION ===== */
+
+        .hero {
+
+            padding: 80px 60px;
+        }
+
+        .hero-container {
+            max-width: 900px;
+        }
+
+        .hero-title {
+            color: #ffffff;
+            font-size: 32px;
+            font-weight: 500;
+            line-height: 1.2;
+            letter-spacing: -0.5px;
+            margin-bottom: 40px;
+        }
+
+        /* Button */
+        .hero-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 14px 28px;
+            background-color: #e6e6e6;
+            color: #000000;
+            font-size: 16px;
+            font-weight: 500;
+            border-radius: 30px;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+
+        .hero-btn:hover {
+            background-color: #ffffff;
+        }
+
+        .arrow {
+            font-size: 18px;
+        }
+
+        /* ===== PREVIEW SECTION ===== */
+
+        .preview-section {
+
+            padding: 40px 60px 120px 60px;
+            display: flex;
+            justify-content: center;
+        }
+
+        .preview-container {
+            max-width: 1200px;
+            width: 100%;
+        }
+
+        .preview-image {
+            width: 100%;
+            border-radius: 16px;
+            display: block;
+            box-shadow:
+                0 40px 100px rgba(0, 0, 0, 0.6),
+                0 0 0 1px rgba(255, 255, 255, 0.05);
+        }
+
+        .section {
+            width: 100%;
+            padding: 40px 20px;
+            text-align: center;
+        }
+
+        .section h2 {
+            font-size: 18px;
+            font-weight: 500;
+            margin-bottom: 40px;
+            color: #d6d6d6;
+        }
+
+        .logo-grid {
+            display: grid;
+            grid-template-columns: repeat(8, 1fr);
+            gap: 16px;
+            max-width: 1200px;
+            margin: auto;
+        }
+
+        .logo {
+            background: #17140d;
+            border: 1px solid #232018;
+            border-radius: 10px;
+            height: 80px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 20px;
+            font-weight: 600;
+            color: #e5e5e5;
+            transition: all 0.2s ease;
+        }
+
+        .logo:hover {
+            background: #1f1b12;
+            transform: translateY(-2px);
+        }
+
+        /* ===== FEATURE SECTION ===== */
+
+        /* ===== FEATURE SECTION ===== */
+
+        .feature-section {
+            background-color: #1D1B15;
+            padding: 10px 0;
+        }
+
+        .feature-container {
+            width: 100%;
+            display: flex;
+
+
+        }
+
+
+
+        /* LEFT SIDE */
+        .feature-text {
+            margin-left: 20px;
+            width: 25vw;
+            margin-top: 200px;
+
+        }
+
+        .feature-text h2 {
+            color: #ffffff;
+            font-size: 22px;
+            font-weight: 500;
+            margin-bottom: 20px;
+        }
+
+        .feature-text p {
+            color: #a0a0a0;
+            font-size: 22px;
+            line-height: 1.6;
+            margin-bottom: 24px;
+        }
+
+        /* Link */
+
+        .feature-link {
+            color: #ff6a00;
+            text-decoration: none;
+            font-size: 16px;
+            font-weight: 500;
+            transition: 0.3s ease;
+        }
+
+        .feature-link:hover {
+            opacity: 0.7;
+        }
+
+        /* RIGHT SIDE IMAGE */
+
+        .feature-image {
+            flex: 1;
+            padding: 5px;
+            border-radius: 14px;
+            background: linear-gradient(180deg,
+                    rgba(255, 255, 255, 0.08),
+                    rgba(255, 255, 255, 0.02));
+        }
+
+        .feature-image img {
+            width: 100%;
+            border-radius: 10px;
+
+            box-shadow:
+                0 60px 140px rgba(0, 0, 0, 0.8),
+                0 0 0 1px rgba(255, 255, 255, 0.06);
+        }
+
+        /* feature section -2 */
+        .feature-section-2 {
+            margin-top: 90px;
+        }
+
+        .feature-section-2 img {
+            width: 100%;
+
+        }
+
+        /* feature section -3 */
+        .feature-section-3 {
+            margin-top: 90px;
+        }
+
+        .feature-section-3 img {
+            width: 100%;
+
+        }
+
+
+        /* testimonial-section */
+        /* testimonial-section */
+
+        .testimonial-section {
+            width: 100%;
+            padding: 100px 8%;
+            background: #14120B;
+            text-align: center;
+        }
+
+        .testimonial-section h1 {
+            font-size: 38px;
+            margin-bottom: 70px;
+            color: #ffffff;
+            font-weight: 500;
+        }
+
+        /* GRID */
+
+        .grid {
+            max-width: 1300px;
+            margin: auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 24px;
+        }
+
+        /* CARD */
+
+        .card {
+            background: #16130c;
+            padding: 30px;
+            border-radius: 12px;
+            border: 1px solid #242018;
+            text-align: left;
+            transition: all 0.25s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-6px);
+            border-color: #2f2a1f;
+        }
+
+        /* TEXT */
+
+        .card p {
+            color: #dcdcdc;
+            font-size: 15px;
+            line-height: 1.7;
+            margin-bottom: 26px;
+        }
+
+        /* AUTHOR */
+
+        .author strong {
+            display: block;
+            color: #ffffff;
+            font-size: 14px;
+        }
+
+        .author span {
+            font-size: 13px;
+            color: #8a8a8a;
+        }
+
+
+
+        .feature-section-4 {
+            margin-top: 90px;
+        }
+
+        .feature-section-4 img {
+            width: 100%;
+
+        }
+
+
+        /* changelog section */
+
+        .changelog-section {
+            padding: 80px 8%;
+            background: #14120B;
+            color: white;
+        }
+
+        .changelog-section h2 {
+            font-size: 32px;
+            margin-bottom: 30px;
+        }
+
+        /* grid */
+
+        .changelog-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+            margin-bottom: 25px;
+        }
+
+        /* card */
+
+        .log-card {
+            background: #16130c;
+            border: 1px solid #242018;
+            padding: 22px;
+            border-radius: 10px;
+            transition: all 0.2s ease;
+        }
+
+        .log-card:hover {
+            border-color: #2f2a1f;
+            transform: translateY(-3px);
+        }
+
+        /* date */
+
+        .date {
+            display: block;
+            font-size: 13px;
+            color: #8a8a8a;
+            margin-bottom: 10px;
+        }
+
+        /* version badge */
+
+        .badge {
+            display: inline-block;
+            font-size: 12px;
+            padding: 3px 8px;
+            border-radius: 20px;
+            border: 1px solid #444;
+            margin-right: 8px;
+            color: #ccc;
+        }
+
+        /* text */
+
+        .log-card p {
+            font-size: 15px;
+            line-height: 1.5;
+            color: #e6e6e6;
+        }
+
+        /* bottom link */
+
+        .changelog-link {
+            color: #ff6a00;
+            font-size: 15px;
+            text-decoration: none;
+        }
+
+        .changelog-link:hover {
+            opacity: 0.7;
+        }
+
+        .feature-section-5 {
+            margin-top: 90px;
+        }
+
+        .feature-section-5 img {
+            width: 100%;
+
+        }
+
+
+        /* highlights section */
+
+        .highlights-section {
+            padding: 100px 8%;
+            background: #1B1913;
+            color: white;
+        }
+
+        .highlights-container {
+            max-width: 1200px;
+            margin: auto;
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            gap: 40px;
+        }
+
+        /* left title */
+
+        .highlights-left h3 {
+            font-size: 18px;
+            font-weight: 500;
+            color: #cfcfcf;
+        }
+
+        /* right column */
+
+        .highlights-right {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+        }
+
+        /* cards */
+
+        .highlight-card {
+            background: #16130c;
+            border: 1px solid #242018;
+            padding: 22px;
+            border-radius: 10px;
+            transition: all 0.2s ease;
+        }
+
+        .highlight-card:hover {
+            transform: translateY(-3px);
+            border-color: #2f2a1f;
+        }
+
+        /* text */
+
+        .highlight-card h4 {
+            font-size: 16px;
+            margin-bottom: 6px;
+            color: #ffffff;
+        }
+
+        .highlight-card p {
+            font-size: 14px;
+            line-height: 1.6;
+            color: #a8a8a8;
+            margin-bottom: 10px;
+        }
+
+        .highlight-card span {
+            font-size: 13px;
+            color: #7a7a7a;
+        }
+
+        /* bottom link */
+
+        .highlight-link {
+            margin-top: 10px;
+            font-size: 15px;
+            color: #ff6a00;
+            text-decoration: none;
+        }
+
+        .highlight-link:hover {
+            opacity: 0.7;
+        }
+
+        /* CTA section */
+
+        .cta-section {
+            height: 70vh;
+            background: #14120B;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            gap: 30px;
+        }
+
+        /* heading */
+
+        .cta-section h1 {
+            font-size: 72px;
+            font-weight: 500;
+            color: #d9d9d9;
+            letter-spacing: -1px;
+        }
+
+        /* button */
+
+        .cta-btn {
+            padding: 14px 30px;
+            background: #e6e6e6;
+            color: #000;
+            border-radius: 999px;
+            font-size: 16px;
+            text-decoration: none;
+            transition: all 0.25s ease;
+        }
+
+        .cta-btn:hover {
+            background: #ffffff;
+            transform: translateY(-2px);
+        }
+
+
+
+        .footer {
+            background: #14120B;
+            padding: 80px 8% 40px;
+            color: #cfcfcf;
+            font-size: 14px;
+        }
+
+        /* grid */
+
+        .footer-grid {
+            max-width: 1300px;
+            margin: auto;
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            gap: 40px;
+        }
+
+        /* column */
+
+        .footer h4 {
+            color: #9a9a9a;
+            font-size: 13px;
+            margin-bottom: 14px;
+            font-weight: 500;
+        }
+
+        .footer a {
+            display: block;
+            color: #dcdcdc;
+            text-decoration: none;
+            margin-bottom: 10px;
+            transition: opacity 0.2s;
+        }
+
+        .footer a:hover {
+            opacity: 0.6;
+        }
+
+        /* bottom bar */
+
+        .footer-bottom {
+            max-width: 1300px;
+            margin: 60px auto 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            color: #7a7a7a;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        /* controls */
+
+        .footer-controls {
+            display: flex;
+            gap: 10px;
+        }
+
+        .footer-controls button,
+        .footer-controls select {
+            background: #1c1a14;
+            border: 1px solid #2a261d;
+            color: #ccc;
+            padding: 6px 10px;
+            border-radius: 20px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="nav">
+            <div class="svg"><svg fill="none" class="w-[95.37px] lg:w-[95.75px]" viewBox="0 0 2193 545"
+                    xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" overflow="visible">
+                    <g fill="currentColor">
+                        <path
+                            d="m466.383 137.073-206.469-119.2034c-6.63-3.8287-14.811-3.8287-21.441 0l-206.4586 119.2034c-5.5734 3.218-9.0144 9.169-9.0144 15.615v240.375c0 6.436 3.441 12.397 9.0144 15.615l206.4686 119.203c6.63 3.829 14.811 3.829 21.441 0l206.468-119.203c5.574-3.218 9.015-9.17 9.015-15.615v-240.375c0-6.436-3.441-12.397-9.015-15.615zm-12.969 25.25-199.316 345.223c-1.347 2.326-4.904 1.376-4.904-1.319v-226.048c0-4.517-2.414-8.695-6.33-10.963l-195.7577-113.019c-2.3263-1.347-1.3764-4.905 1.3182-4.905h398.6305c5.661 0 9.199 6.136 6.368 11.041h-.009z">
+                        </path>
+                        <path
+                            d="m723.253 148.84h87.856v48.397h-84.881c-45.789 0-81.527 26.432-81.527 82.273s35.738 82.273 81.527 82.273h84.881v48.397h-91.578c-76.691 0-131.039-45.043-131.039-130.66 0-85.618 58.07-130.661 134.761-130.661z">
+                        </path>
+                        <path
+                            d="m855.781 148.84h54.348v159.7c0 39.828 18.242 58.448 61.056 58.448 42.815 0 61.055-18.61 61.055-58.448v-159.7h54.35v170.866c0 58.071-36.85 94.933-115.405 94.933-78.551 0-115.404-37.231-115.404-95.301z">
+                        </path>
+                        <path
+                            d="m1370.62 222.913c0 29.04-16.75 51.372-39.09 61.056v.746c23.45 3.354 35.37 20.103 35.73 42.814l1.12 82.641h-54.35l-1.11-73.705c-.37-16.381-10.06-26.432-29.41-26.432h-90.47v100.137h-54.34v-261.33h150.02c49.15 0 81.9 24.94 81.9 74.083zm-54.73 7.454c0-22.333-11.91-34.623-34.24-34.623h-88.61v69.236h89.34c20.47 0 33.51-12.281 33.51-34.623z">
+                        </path>
+                        <path
+                            d="m1576.09 333.85c0-18.61-11.91-26.432-29.77-27.915l-60.31-5.583c-52.12-4.837-79.3-25.318-79.3-74.83 0-49.511 33.51-76.69 81.53-76.69h133.27v46.904h-129.55c-18.61 0-30.52 9.683-30.52 28.294 0 18.61 12.28 27.547 30.9 29.04l61.42 5.214c46.54 4.091 77.06 25.318 77.06 75.198s-32.38 76.69-78.17 76.69h-139.23v-46.904h134.01c17.5 0 28.66-11.912 28.66-29.408z">
+                        </path>
+                        <path
+                            d="m1789.79 144.373c81.89 0 133.65 52.487 133.65 134.761 0 82.273-53.98 135.506-135.88 135.506s-133.65-53.233-133.65-135.506c0-82.274 53.98-134.761 135.88-134.761zm77.43 135.129c0-55.095-32.02-87.479-78.56-87.479-46.53 0-78.55 32.384-78.55 87.479 0 55.094 32.02 87.478 78.55 87.478 46.54 0 78.56-32.384 78.56-87.478z">
+                        </path>
+                        <path
+                            d="m2192.95 222.913c0 29.04-16.75 51.372-39.1 61.056v.746c23.46 3.354 35.37 20.103 35.74 42.814l1.12 82.641h-54.35l-1.12-73.705c-.36-16.381-10.05-26.432-29.4-26.432h-90.47v100.137h-54.35v-261.33h150.03c49.14 0 81.9 24.94 81.9 74.083zm-54.73 7.454c0-22.333-11.91-34.623-34.25-34.623h-88.6v69.236h89.34c20.47 0 33.51-12.281 33.51-34.623z">
+                        </path>
+                    </g>
+                </svg>
+            </div>
+            <!-- Nav Links -->
+            <ul class="nav-links">
+                <li><a href="#">Product</a></li>
+                <li><a href="#">Enterprise</a></li>
+                <li><a href="#">Pricing</a></li>
+                <li><a href="#">Resources</a></li>
+            </ul>
+
+            <!-- Right Buttons -->
+            <div class="nav-buttons">
+                <a href="#" class="btn btn-outline">Sign in</a>
+                <a href="#" class="btn btn-primary">Download</a>
+            </div>
+
+        </div>
+        <section class="hero">
+            <div class="hero-container">
+                <h1 class="hero-title">
+                    Built to make you extraordinarily productive,<br>
+                    Cursor is the best way to code with AI.
+                </h1>
+
+                <a href="#" class="hero-btn">
+                    Download for Windows
+                    <span class="arrow">↓</span>
+                </a>
+            </div>
+        </section>
+        <section class="preview-section">
+            <div class="preview-container">
+                <img src="WhatsApp Image 2026-02-15 at 12.29.33 AM.jpeg" alt="App Preview" class="preview-image">
+            </div>
+        </section>
+        <section class="section">
+            <h2>Trusted every day by teams that build world-class software</h2>
+
+            <div class="logo-grid">
+                <div class="logo">Stripe</div>
+                <div class="logo">OpenAI</div>
+                <div class="logo">Linear</div>
+                <div class="logo">Datadog</div>
+                <div class="logo">NVIDIA</div>
+                <div class="logo">Figma</div>
+                <div class="logo">Ramp</div>
+                <div class="logo">Adobe</div>
+            </div>
+        </section>
+        <section class="feature-section">
+            <div class="feature-container">
+
+                <!-- LEFT TEXT -->
+                <div class="feature-text">
+                    <h2>Agents turn ideas into code</h2>
+
+                    <p>
+                        Accelerate development by handing off tasks to Cursor,
+                        while you focus on making decisions.
+                    </p>
+
+                    <a href="#" class="feature-link">
+                        Learn about agentic development →
+                    </a>
+                </div>
+
+                <!-- RIGHT IMAGE -->
+                <div class="feature-image">
+                    <img src="2nd image.jpeg" alt="">
+                </div>
+
+            </div>
+        </section>
+        <section class="feature-section-2">
+            <div>
+                <img src="image2.png" alt="">
+            </div>
+        </section>
+        <section class="feature-section-3">
+            <div>
+                <img src="image-3.png" alt="">
+            </div>
+        </section>
+        <section class="testimonial-section">
+            <h1>The new way to build software.</h1>
+
+            <div class="grid">
+
+                <div class="card">
+                    <p>“It was night and day from one batch to another. Adoption went from single digits to over 80%…”
+                    </p>
+                    <div class="author">
+                        <strong>Diana Hu</strong>
+                        <span>General Partner, Y Combinator</span>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <p>“My favorite enterprise AI service is Cursor. Every one of our engineers is now assisted by AI…”
+                    </p>
+                    <div class="author">
+                        <strong>Jensen Huang</strong>
+                        <span>President & CEO, NVIDIA</span>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <p>“The best LLM applications have an autonomy slider. You control how much independence to give the
+                        AI…”</p>
+                    <div class="author">
+                        <strong>Andrej Karpathy</strong>
+                        <span>CEO, Eureka Labs</span>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <p>“Cursor quickly grew from hundreds to thousands of enthusiastic Stripe employees…”</p>
+                    <div class="author">
+                        <strong>Patrick Collison</strong>
+                        <span>Co-Founder & CEO, Stripe</span>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <p>“The most useful AI tool I currently pay for is Cursor. It’s fast and everything is well put
+                        together.”</p>
+                    <div class="author">
+                        <strong>shadcn</strong>
+                        <span>Creator of shadcn/ui</span>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <p>“It’s definitely becoming more fun to be a programmer… models like GPT-5 shine brightest.”</p>
+                    <div class="author">
+                        <strong>Greg Brockman</strong>
+                        <span>President, OpenAI</span>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+        <section class="feature-section-4">
+            <div>
+                <img src="image-4.png" alt="">
+            </div>
+        </section>
+        <section class="changelog-section">
+            <h2>Changelog</h2>
+
+            <div class="changelog-grid">
+
+                <div class="log-card">
+                    <span class="date">Feb 12, 2026</span>
+                    <p>Long-running Agents in Research Preview</p>
+                </div>
+
+                <div class="log-card">
+                    <span class="badge">2.4</span>
+                    <span class="date">Jan 22, 2026</span>
+                    <p>Subagents, Skills, and Image Generation</p>
+                </div>
+
+                <div class="log-card">
+                    <span class="date">Jan 16, 2026</span>
+                    <p>CLI Agent Modes and Cloud Handoff</p>
+                </div>
+
+                <div class="log-card">
+                    <span class="date">Jan 8, 2026</span>
+                    <p>New CLI Features and Improved CLI Performance</p>
+                </div>
+
+            </div>
+
+            <a href="#" class="changelog-link">See what's new in Cursor →</a>
+        </section>
+        <section class="feature-section-4">
+            <div>
+                <img src="image-5.png" alt="">
+            </div>
+        </section>
+    </div>
+    <section class="highlights-section">
+
+        <div class="highlights-container">
+
+            <div class="highlights-left">
+                <h3>Recent highlights</h3>
+            </div>
+
+            <div class="highlights-right">
+
+                <div class="highlight-card">
+                    <h4>Towards self-driving codebases</h4>
+                    <p>We're making a part of our multi-agent research harness available to try today in preview.</p>
+                    <span>Research · Feb 5, 2026</span>
+                </div>
+
+                <div class="highlight-card">
+                    <h4>Salesforce ships higher-quality code across 20,000 developers with Cursor</h4>
+                    <p>Over 90% of developers at Salesforce now use Cursor, driving double-digit improvements in cycle
+                        time and code quality.</p>
+                    <span>Customers · Jan 21, 2026</span>
+                </div>
+
+                <div class="highlight-card">
+                    <h4>Best practices for coding with agents</h4>
+                    <p>A comprehensive guide to working with coding agents, from planning to reviewing workflows and
+                        managing context.</p>
+                    <span>Product · Jan 9, 2026</span>
+                </div>
+
+                <a href="#" class="highlight-link">View more posts →</a>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <section class="cta-section">
+        <h1>Try Cursor now.</h1>
+
+        <a href="#" class="cta-btn">
+            Download for Windows ↓
+        </a>
+    </section>
+
+
+    <footer class="footer">
+
+        <div class="footer-grid">
+
+            <div>
+                <h4>Product</h4>
+                <a href="#">Agents</a>
+                <a href="#">Enterprise</a>
+                <a href="#">Code Review</a>
+                <a href="#">Tab</a>
+                <a href="#">CLI</a>
+                <a href="#">Cloud Agents</a>
+                <a href="#">Pricing</a>
+            </div>
+
+            <div>
+                <h4>Resources</h4>
+                <a href="#">Download</a>
+                <a href="#">Changelog</a>
+                <a href="#">Docs</a>
+                <a href="#">Forum</a>
+                <a href="#">Status</a>
+            </div>
+
+            <div>
+                <h4>Company</h4>
+                <a href="#">Careers</a>
+                <a href="#">Blog</a>
+                <a href="#">Community</a>
+                <a href="#">Students</a>
+                <a href="#">Brand</a>
+                <a href="#">Anysphere</a>
+            </div>
+
+            <div>
+                <h4>Legal</h4>
+                <a href="#">Terms of Service</a>
+                <a href="#">Privacy Policy</a>
+                <a href="#">Data Use</a>
+                <a href="#">Security</a>
+            </div>
+
+            <div>
+                <h4>Connect</h4>
+                <a href="#">X</a>
+                <a href="#">LinkedIn</a>
+                <a href="#">YouTube</a>
+            </div>
+
+        </div>
+
+        <div class="footer-bottom">
+            <span>© 2026 Anysphere, Inc. · SOC 2 Certified</span>
+
+            <div class="footer-controls">
+                <button>🖥</button>
+                <button>☀</button>
+                <button>🌙</button>
+                <select>
+                    <option>English</option>
+                </select>
+            </div>
+        </div>
+
+    </footer>
+
+
+
+</body>
+
+</html>
